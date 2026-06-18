@@ -14,11 +14,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [animate, setAnimate] = useState(false);
-  useEffect(() => {
-    // Runs after the component is rendered
-    setAnimate(true);
-  }, []);
+   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div>
@@ -28,12 +24,12 @@ function App() {
             <img src={schoolLogo} className="logo" id="school-logo"/>
             <img src={airForceLogo} className="logo" id="air-force-logo"/>
           </div>
-          <img src={firstPage} />
-          <img src={whiteStripe} className={animate ? "white-stripe stripe-animation" : "white-stripe"} />
-          <img src={openingText} className={animate ? "opening-text text-animation" : "opening-text"} />
+          <img src={firstPage} onLoad={() => setImageLoaded(true)} />
+          <img src={whiteStripe} className={imageLoaded ? "white-stripe stripe-animation" : "white-stripe"} />
+          <img src={openingText} className={imageLoaded ? "opening-text text-animation" : "opening-text"} />
           <div className="lower-banner">
-            <img src={darkRec} className={animate ? "dark-rec dark-animation" : "dark-rec"} />
-            <img src={date} className={animate ? "date date-animation" : "date"} />
+            <img src={darkRec} className={imageLoaded ? "dark-rec dark-animation" : "dark-rec"} />
+            <img src={date} className={imageLoaded ? "date date-animation" : "date"} />
           </div>
         </div>
         <div className="page" id="second-page">
