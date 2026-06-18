@@ -6,40 +6,41 @@ import fourthPage from "./assets/fourthPageNew.png";
 import fifthPage from "./assets/fifthPageNew.png";
 import openingText from "./assets/firstPage/openingText.png";
 import darkRec from "./assets/firstPage/darkRectangle.png";
-import date from "./assets/firstPage/date.png"
-
-
+import date from "./assets/firstPage/date.png";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 
 function App() {
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    // Runs after the component is rendered
+    setAnimate(true);
+  }, []);
+
   return (
     <div>
       <div className="all-pages">
         <div className="reveal page" id="first-page">
-            <img src={firstPage} />
-            <img src={whiteStripe} className="white-stripe"/>
-            <img src={openingText} className="opening-text"/>
-            <div className="lower-banner">
-              <img src={darkRec} className="dark-rec"/>
-              <img src={date} className="date"/>
-            </div>
+          <img src={firstPage} />
+          <img src={whiteStripe} className={animate ? "white-stripe stripe-animation" : "white-stripe"} />
+          <img src={openingText} className={animate ? "opening-text text-animation" : "opening-text"} />
+          <div className="lower-banner">
+            <img src={darkRec} className={animate ? "dark-rec dark-animation" : "dark-rec"} />
+            <img src={date} className={animate ? "date date-animation" : "date"} />
+          </div>
         </div>
         <div className="page" id="second-page">
-            <img src={secondPage} />
-
+          <img src={secondPage} />
         </div>
         <div className="page" id="third-page">
-            <img src={thirdPage} />
-
+          <img src={thirdPage} />
         </div>
         <div className="page" id="fourth-page">
-            <img src={fourthPage} />
-
+          <img src={fourthPage} />
         </div>
         <div className="page" id="fifth-page">
-            <img src={fifthPage} />
-
+          <img src={fifthPage} />
         </div>
       </div>
     </div>
