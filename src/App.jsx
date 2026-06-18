@@ -5,7 +5,8 @@ import thirdPage from "./assets/thirdPage.png";
 import fourthPage from "./assets/fourthPage.png";
 import fifthPage from "./assets/fifthPage.png";
 import openingText from "./assets/firstPage/openingText.png";
-import darkRec from "./assets/firstPage/darkRectangle.png"
+import darkRec from "./assets/firstPage/darkRectangle.png";
+import date from "./assets/firstPage/date.png"
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <img src={openingText} className="opening-text"/>
             <div className="lower-banner">
               <img src={darkRec} className="dark-rec"/>
+              <img src={date} className="date"/>
             </div>
         </div>
         <div className="page" id="second-page">
