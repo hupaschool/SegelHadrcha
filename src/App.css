@@ -143,3 +143,7 @@ body {
   top: 1vh;
   right: 2vw;
 }
+
+.hidden {
+  opacity: 0;
+}

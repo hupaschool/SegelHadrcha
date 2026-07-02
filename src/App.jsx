@@ -25,11 +25,11 @@ function App() {
             <img src={airForceLogo} className="logo" id="air-force-logo"/>
           </div>
           <img src={firstPage} onLoad={() => setImageLoaded(true)} />
-          <img src={whiteStripe} className={imageLoaded ? "white-stripe stripe-animation" : "white-stripe"} />
-          <img src={openingText} className={imageLoaded ? "opening-text text-animation" : "opening-text"} />
+          <img src={whiteStripe} className={imageLoaded ? "white-stripe stripe-animation" : "white-stripe hidden"} />
+          <img src={openingText} className={imageLoaded ? "opening-text text-animation" : "opening-text hidden"} />
           <div className="lower-banner">
-            <img src={darkRec} className={imageLoaded ? "dark-rec dark-animation" : "dark-rec"} />
-            <img src={date} className={imageLoaded ? "date date-animation" : "date"} />
+            <img src={darkRec} className={imageLoaded ? "dark-rec dark-animation" : "dark-rec hidden"} />
+            <img src={date} className={imageLoaded ? "date date-animation" : "date hidden"} />
           </div>
         </div>
         <div className="page" id="second-page">
